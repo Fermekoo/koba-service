@@ -1,6 +1,6 @@
 name: Terraform Apply
 
-on:
+"on":
   workflow_dispatch:
     inputs:
       environment:
@@ -13,14 +13,13 @@ on:
           - prod
 
 permissions:
-  id-token: write   # Required for OIDC token exchange
+  id-token: write
   contents: read
 
 jobs:
   apply:
-    name: Terraform Apply (${{ github.event.inputs.environment }})
+    name: Terraform Apply
     runs-on: ubuntu-latest
-    # Uses a GitHub environment for optional manual approval gates
     environment: ${{ github.event.inputs.environment }}
 
     steps:

@@ -1,13 +1,13 @@
 name: Terraform Plan
 
-on:
+"on":
   pull_request:
     branches: [main]
 
 permissions:
-  id-token: write       # Required for OIDC token exchange
+  id-token: write
   contents: read
-  pull-requests: write  # Required to post PR comments
+  pull-requests: write
 
 jobs:
   plan:
