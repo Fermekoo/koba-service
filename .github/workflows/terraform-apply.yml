@@ -1,6 +1,6 @@
 name: Terraform Apply
 
-"on":
+on:
   workflow_dispatch:
     inputs:
       environment:
