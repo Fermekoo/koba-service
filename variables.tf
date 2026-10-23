@@ -25,13 +25,13 @@ variable "vpc_cidr" {
 variable "node_instance_types" {
   type        = list(string)
   description = "EC2 instance types for EKS worker nodes"
-  default     = ["t3.medium"]
+  default     = ["t3.micro"]
 }
 
 variable "desired_nodes" {
   type        = number
   description = "Desired number of worker nodes"
-  default     = 2
+  default     = 1
 }
 
 variable "min_nodes" {
@@ -43,5 +43,5 @@ variable "min_nodes" {
 variable "max_nodes" {
   type        = number
   description = "Maximum number of worker nodes"
-  default     = 4
+  default     = 2
 }
